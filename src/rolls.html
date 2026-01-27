@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolls-Royce Motor Cars | Inspiring Greatness</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- DESIGN TOKENS --- */
+        :root {
+            --rr-black: #050505;
+            --rr-silver: #e0e0e0;
+            --rr-gold: #c5a059;
+            --rr-dark-grey: #1a1a1a;
+            --rr-transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* --- RESET & BASE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--rr-black);
+            color: #fff;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-weight: 200;
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--rr-transition); }
+        ul { list-style: none; }
+
+        /* --- STYLED CSS LOGO --- */
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(255,255,255,0.8);
+            padding: 0.5rem 1.2rem;
+            text-align: center;
+            transition: var(--rr-transition);
+        }
+
+        .logo-word {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.6rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-right: -0.6rem; /* Offsets letter spacing for perfect centering */
+        }
+
+        /* --- NAVIGATION --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 3rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: var(--rr-transition);
+        }
+
+        .navbar.scrolled {
+            padding: 1.5rem 5%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid #222;
+        }
+
+        .nav-links {
+            display: flex; gap: 4rem;
+        }
+
+        .nav-links a {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            opacity: 0.7;
+        }
+
+        .nav-links a:hover { opacity: 1; color: var(--rr-gold); }
+
+        .cta-enquire {
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+        }
+
+        .cta-enquire:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* --- HERO BANNER --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-media {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+        }
+
+        .hero-media img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: brightness(0.5);
+            transform: scale(1.1);
+            animation: heroZoom 25s infinite alternate;
+        }
+
+        @keyframes heroZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.15); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-content span {
+            display: block;
+            font-size: 1.4rem;
+            letter-spacing: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(4rem, 12vw, 14rem);
+            font-weight: 100;
+            letter-spacing: 4rem;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            line-height: 1;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 1.5rem 4rem;
+            border: 1px solid #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.4rem;
+            font-size: 1.1rem;
+        }
+
+        .hero-btn:hover { background: #fff; color: #000; }
+
+        /* --- SECTION HEADERS --- */
+        .section-header {
+            padding: 12rem 5% 6rem;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 4rem;
+            font-weight: 100;
+            letter-spacing: 1rem;
+            text-transform: uppercase;
+        }
+
+        /* --- MODEL GRID --- */
+        .model-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+            padding: 0 2rem 10rem;
+            background: #111;
+        }
+
+        .model-card {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .model-card img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: var(--rr-transition);
+        }
+
+        .model-card:hover img { transform: scale(1.05); }
+
+        .model-info {
+            position: absolute;
+            bottom: 5rem; left: 5rem;
+            z-index: 3;
+        }
+
+        .model-info h3 {
+            font-size: 3.5rem;
+            font-weight: 200;
+            letter-spacing: 0.6rem;
+            text-transform: uppercase;
+        }
+
+        /* --- UPDATED BESPOKE SECTION --- */
+        .bespoke-section {
+            display: flex;
+            min-height: 90vh;
+            background: #0a0a0a;
+        }
+
+        .bespoke-image {
+            flex: 1.2;
+            background: url('https://images.unsplash.com/photo-1606136815957-670104620f3a?q=80&w=2000&auto=format&fit=crop') no-repeat center center/cover;
+        }
+
+        .bespoke-text {
+            flex: 1;
+            padding: 10% 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .bespoke-text h2 {
+            font-size: 4.5rem;
+            font-weight: 100;
+            letter-spacing: 0.8rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+
+        .bespoke-text p {
+            font-size: 1.8rem;
+            opacity: 0.7;
+            max-width: 480px;
+            margin-bottom: 4rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #000;
+            padding: 10rem 5% 4rem;
+            border-top: 1px solid #111;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 6rem;
+            margin-bottom: 8rem;
+        }
+
+        .footer-links h4 {
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: var(--rr-gold);
+        }
+
+        .footer-links li { margin-bottom: 1.5rem; }
+        .footer-links a { font-size: 1.3rem; opacity: 0.5; }
+        .footer-links a:hover { opacity: 1; }
+
+        .social-icons { display: flex; gap: 2.5rem; margin-top: 2rem; }
+        .social-icons i { font-size: 2rem; opacity: 0.6; }
+
+        .footer-bottom {
+            padding-top: 4rem;
+            border-top: 1px solid #111;
+            display: flex;
+            justify-content: space-between;
+            opacity: 0.4;
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+        }
+
+        /* --- ANIMATIONS --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: var(--rr-transition);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links { display: none; }
+            .model-container { grid-template-columns: 1fr; }
+            .bespoke-section { flex-direction: column; }
+            .bespoke-image { height: 50vh; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar" id="mainNav">
+    <a href="#" class="logo-container">
+        <span class="logo-word">Rolls</span>
+        <span class="logo-word">Royce</span>
+    </a>
+    <div class="nav-links">
+        <a href="#models">Models</a>
+        <a href="#bespoke">Bespoke</a>
+        <a href="#">Ownership</a>
+        <a href="#">Stories</a>
+    </div>
+    <a href="#" class="cta-enquire">Enquire</a>
+</nav>
+
+<section class="hero">
+    <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1631214548473-0498064dc931?auto=format&fit=crop&q=80&w=2500" alt="Rolls-Royce Spectre">
+    </div>
+    <div class="hero-content">
+        <span>The Electric Super Coupé</span>
+        <h1>SPECTRE</h1>
+        <a href="#models" class="hero-btn">Discover More</a>
+    </div>
+</section>
+
+<div id="models" class="section-header reveal">
+    <h2 style="letter-spacing: 1.5rem;">The Models</h2>
+</div>
+
+<section class="model-container">
+    <div class="model-card reveal">
+        <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&q=80&w=1500" alt="Phantom">
+        <div class="model-info">
+            <h3>Phantom</h3>
+            <a href="#" style="border-bottom: 1px solid var(--rr-gold); padding-bottom: 5px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">Explore</a>
+        </div>
+    </div>
+    <div class="model-card reveal">
+        <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=1500" alt="Cullinan">
+        <div class="model-info">
+            <h3>Cullinan</h3>
+            <a href="#" style="border-bottom: 1px solid var(--rr-gold); padding-bottom: 5px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">Explore</a>
+        </div>
+    </div>
+    <div class="model-card reveal">
+        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=1500" alt="Cullinan">
+        <div class="model-info">
+            <h3>Cullinan</h3>
+            <a href="#" style="border-bottom: 1px solid var(--rr-gold); padding-bottom: 5px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">Explore</a>
+        </div>
+    </div>
+
+
+    <div class="model-card reveal">
+        <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&q=80&w=1500" alt="Cullinan">
+        <div class="model-info">
+            <h3>Cullinan</h3>
+            <a href="#" style="border-bottom: 1px solid var(--rr-gold); padding-bottom: 5px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;">Explore</a>
+        </div>
+    </div>
+
+</section>
+
+<section id="bespoke" class="bespoke-section">
+    <div class="bespoke-image reveal"></div>
+    <div class="bespoke-text">
+        <h2 class="reveal">The Bespoke Experience</h2>
+        <p class="reveal">In the world of Rolls-Royce, there is no such thing as "standard." Every motor car is a canvas for your imagination, handcrafted by artisans at the Home of Rolls-Royce in Goodwood.</p>
+        <a href="#" class="hero-btn reveal" style="width: fit-content; border-color: var(--rr-gold); color: var(--rr-gold);">Begin Journey</a>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-top">
+        <div class="footer-brand">
+            <div class="logo-container" style="width: fit-content; margin-bottom: 2rem;">
+            </div>
+            <p style="opacity: 0.5; max-width: 250px;">Hand-crafting icons from the Home of Rolls-Royce at Goodwood, England.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Collection</h4>
+            <ul>
+                <li><a href="#">Phantom</a></li>
+                <li><a href="#">Ghost</a></li>
+                <li><a href="#">Cullinan</a></li>
+                <li><a href="#">Spectre</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Estate</h4>
+            <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Bespoke</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Newsletter</h4>
+            <p style="opacity:0.5; font-size: 1.2rem; margin-bottom: 2rem;">Inspiring stories delivered to your inbox.</p>
+            <input type="email" placeholder="Email Address" style="background: transparent; border: none; border-bottom: 1px solid #333; color: #fff; padding: 1rem 0; width: 100%; outline: none;">
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>&copy; ROLLS-ROYCE MOTOR CARS 2026</span>
+        <div>
+            <a href="#" style="margin-right: 3rem;">Privacy</a>
+            <a href="#">Legal</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('mainNav');
+        if (window.scrollY > 100) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

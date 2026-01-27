@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolls-Royce Motor Cars | Clone Project</title>
+
+    <style>
+        /* --- RESET & BASE --- */
+        html {
+            font-size: 62.5%; /* Makes 1rem = 10px */
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- NAVIGATION --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 3rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: all 0.5s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 1.5rem 5%;
+            border-bottom: 0.5px solid #333;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            letter-spacing: 0.8rem;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-media {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero-content p {
+            letter-spacing: 1rem;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(4rem, 12vw, 10rem);
+            font-weight: 200;
+            letter-spacing: 2.5rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block;
+            padding: 1.5rem 4rem;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* --- RESPONSIVE MODEL GRID --- */
+        .grid-section {
+            padding: 10rem 5%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            position: relative;
+            height: 60rem;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
+        }
+
+        .card-info {
+            position: absolute;
+            bottom: 4rem;
+            left: 4rem;
+        }
+
+        .card-info h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 0.5rem;
+        }
+
+        /* --- RESPONSIVE MOBILE FIXES --- */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .grid-container { grid-template-columns: 1fr; }
+            .hero-content h1 { letter-spacing: 1rem; padding-left: 1rem; }
+            .card { height: 40rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+    <div class="logo">ROLLS-ROYCE</div>
+    <nav class="nav-links">
+        <a href="#">Models</a>
+        <a href="#">Bespoke</a>
+        <a href="#">Ownership</a>
+        <a href="#">Stories</a>
+    </nav>
+    <div class="logo" style="font-size: 1.2rem; letter-spacing: 2px;">ENQUIRE</div>
+</header>
+
+<section class="hero">
+    <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1631214548473-0498064dc931?auto=format&fit=crop&q=80&w=2000" alt="Rolls Royce Spectre">
+    </div>
+    <div class="hero-content">
+        <p>The Future is Electric</p>
+        <h1>SPECTRE</h1>
+        <a href="#" class="btn">Discover More</a>
+    </div>
+</section>
+
+<section class="grid-section">
+    <div class="grid-container">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&q=80&w=1000" alt="Phantom">
+            <div class="card-info">
+                <h2>PHANTOM</h2>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=1000" alt="Cullinan">
+            <div class="card-info">
+                <h2>CULLINAN</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 5rem; border-top: 1px solid #222; font-size: 1rem; letter-spacing: 2px; opacity: 0.5;">
+    © 2026 ROLLS-ROYCE MOTOR CARS CLONE PROJECT
+</footer>
+
+<script>
+    // Smooth Navbar Transition on Scroll
+    window.onscroll = function() {
+        const nav = document.getElementById('navbar');
+        if (window.pageYOffset > 100) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    };
+
+    // Adding a simple "Fade In" effect for cards on load
+    document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transition = `opacity 1s ease ${index * 0.2}s`;
+            setTimeout(() => card.style.opacity = '1', 100);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+
+
+
+        .product-card {
+          width: 18rem;
+          margin: 10px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .card {
+            margin: 15px;
+        }
+
+
+        .card-img-top {
+          height: 300PX;       /* Fixed height for all images */
+          object-fit: cover;   /* Ensures images scale nicely */
+        }
+
+        .card-body {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .price {
+          color: red;
+        }
+
+        .btn-dark {
+          align-self: center;  /* Centers the button */
+          width: 100%;         /* Makes all buttons same width */
+        }
+    </style>
+
+
+
+    <STYLE>
+        /*FOOTER*/
+
+
+        .footer {
+      background-color: #111;       /* Dark background */
+      color: #fff;                  /* White text */
+      display: flex;                /* Flexbox layout */
+      justify-content: space-around;/* Even spacing between sections */
+      align-items: center;          /* Vertical alignment */
+      padding: 20px;                /* Space inside footer */
+      flex-wrap: wrap;              /* Wrap on smaller screens */
+    }
+
+    .footer div {
+      flex: 1;                      /* Equal width for each section */
+      text-align: center;           /* Center align text */
+      margin: 10px;
+    }
+
+    .footer a {
+      color: #fff;                  /* White links */
+      text-decoration: none;        /* Remove underline */
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      color: #f00;                  /* Red hover effect */
+    }
+
+    .footer input[type="email"] {
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      width: 80%;
+      margin-bottom: 10px;
+    }
+
+    .footer button {
+      padding: 8px 15px;
+      background-color: gold;       /* Red button */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer button:hover {
+      background-color: red;       /* Darker red on hover */
+    }
+    </STYLE>
+</head>
+
+
+<body>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <div class = "d-flex">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://tinyurl.com/mwp9dnmm" width="35" alt="Nike">
+
+            <strong class="ms-2 logo-text">RICHIIZ</strong>
+        </a>
+
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">New & Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Mens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Womens</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sale !
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">mens</a></li>
+                        <li><a class="dropdown-item" href="#">womens</a>
+                        <li><a class="dropdown-item" href="#">kids</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">More</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="Search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-outline-success"  type="Submit">Search</button>
+            </form>
+        </div>
+    </div>
+    </div>
+</nav>
+
+
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://www.kalyanjewellers.net/images/banners/gold_banner.jpg" width="200px" height="350PX" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://www.kalyanjewellers.net/images/banners/our-brand.webp" width="200px" height="350PX" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://palmonas.com/cdn/shop/files/web_copy.webp?crop=center&height=794&v=1765781173&width=2000" width="200px" height="350PX" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<br>
+
+<div>
+
+    <h4 class="text-center ">JHUMKA FOR CHUMKA !</h4>
+    <div class="container-fluid">
+        <div class="d-flex">
+
+
+            <div class="card" style="width: 18rem;">
+
+                <img src="https://tinyurl.com/97tk2v93" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><b>EAR PIECE</b></h5>
+                    <p class="card-text">Ear
+                        <b style="color:red">MRP : ₹ 1000.00</b>
+                        Inclusive of all taxes
+                        (Also includes all applicable duties)
+                    </p>
+                    <a href="#" class="btn btn-dark">Add to Bag</a>
+                </div>
+            </div>
+
+
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://tinyurl.com/mrtpdx59" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><strong>Nike Air Force 1 '07 LV8</strong></h5>
+                    <p class="card-text">Men's Shoes
+                        <b style="color:red">MRP : ₹ 10 795.00</b>
+                        Inclusive of all taxes
+                        (Also includes all applicable duties)</p>
+                    <a href="#" class="btn btn-dark">Add to Bag</a>
+                </div>
+            </div>
+
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://cdn.cosmos.so/7ee2ee0c-e493-407e-9e1f-ff4fd92e940e?format=jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><b>Nike Air Force 1 '07</b></h5>
+                    <p class="card-text">Men's Shoes
+                        <b style="color:red">MRP : ₹ 11 895.00</b>
+                        Inclusive of all taxes
+                        (Also includes all applicable duties)</p>
+                    <a href="#" class="btn btn-dark">Add to Bag</a>
+                </div>
+            </div>
+
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://cdn.cosmos.so/459f622c-30f1-4548-8186-2f2ead9fa583?format=jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <b>Air Jordan MVP 92</b></h5>
+                    <p class="card-text">Men's Slides
+                        <b style="color:red"> ₹ 12 630.00</b>
+                        Inclusive of all taxes
+                        (Also includes all applicable duties)</p>
+                    <a href="#" class="btn btn-dark">Add to Bag</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<BR>
+
+<div>
+    <h4 class="text-center ">GOLD FOR BOLDS !</h4>
+    <div class="container-fluid">
+        <div class="d-flex">
+
+
+            <div class="card" style="width: 18rem;">
+
+                <img src="https://cdn.cosmos.so/029ae40e-d2d9-4585-acb1-966e90e6b67c?format=jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><b>Nike Cortez Leather</b></h5>
+                    <p class="card-text">Men's Shoes
+                        <b style="color:DeepPink">MRP : ₹ 11 895.00</b>
+                        Inclusive of all taxes
+                        (Also includes all applicable duties)
+                    </p>
+                    <a href="#" class="btn btn-dark">Add to Bag</a>
+                </div>
+            </div>
+
+
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://cdn.cosmos.so/e6b4cf76-2fd8-4259-876e-a51e93d835b4?format=jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><strong>Nike Air Force 1 '07 </strong></h5>
+                    <p class="card-text">Men's Shoes
+                        <b style="color:DeepPink">MRP : ₹ 10 795.00</b>
+                        Inclusive of all taxes
+                        (Also includes all applicable duties)</p>
+                    <a href="#" class="btn btn-dark">Add to Bag</a>
+                </div>
+            </div>
+
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://cdn.cosmos.so/6a1a1f96-51ee-40db-926f-8397d9c85b9f?format=jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><b>Nike Shox Z</b></h5>
+                    <p class="card-text">Men's Shoes
+                        <b style="color:DeepPink">MRP : ₹ 11 895.00</b>
+                        Inclusive of all taxes
+                        (Also includes all applicable duties)</p>
+                    <a href="#" class="btn btn-dark">Add to Bag</a>
+                </div>
+            </div>
+
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://cdn.cosmos.so/66783783-2496-4d6c-95bd-b1ce918a8bb8?format=jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <b>Nike Victori One</b></h5>
+                    <p class="card-text">Men's Slides
+                        <b style="color:DeepPink">MRP : ₹ 9 695.00</b>
+                        Inclusive of all taxes
+                        (Also includes all applicable duties)</p>
+                    <a href="#" class="btn btn-dark">Add to Bag</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<div CLASS="footer">
+    <div class="one" style="text-align:center">
+        <a href="..">Help</a>
+        <p>Goldiizz@gamil.com</p>
+        <p>📍Hoskote </p>
+    </div>
+    <div class="two">
+        <input type="email" placeholder="Email" aria-label="Email">
+        <button onclick="alert('Thanx BUDDY !x')">Follow</button>
+    </div>
+    <div>
+        <a href=".." target="_blank">Insta</a>
+        <a href=".." target="_blank">Community</a>
+        <a href=".." target="_blank">About</a>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

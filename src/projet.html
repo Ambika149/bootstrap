@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Auroha Navbar</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        footer a {
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #0d6efd !important; /* Changes to Bootstrap primary blue on hover */
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #0d6efd;
+    }
+    </style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="https://i.pinimg.com/736x/c3/e3/e4/c3e3e428c0dd0766e64ddca9ce56d496.jpg"
+                 alt="Logo" width="30" height="30"
+                 class="d-inline-block align-text-top">
+            Auroha
+        </a>
+
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">MENS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">WOMENS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">KIDS</a>
+                </li>
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Sale !
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Mens</a></li>
+                        <li><a class="dropdown-item" href="#">Womens</a></li>
+                        <li><a class="dropdown-item" href="#">Kids</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">More</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <!-- Search -->
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search"
+                       placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">
+                    Search
+                </button>
+            </form>
+
+        </div>
+    </div>
+</nav>
+
+
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://sabyasachi.com/cdn/shop/files/DSabyasachi-06.12_2335d19f-afb9-47ce-93d9-853fcc211162_1920x@2x.jpg?v=1697017957 " class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://sabyasachi.com/cdn/shop/files/Hero_Banner-01_ca8061c0-3038-4167-bafe-acdb234bde7c_1920x@2x.jpg?v=1768194740" class="d-block w-100" alt="...">
+        </div>
+
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="image1.jpg" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item" data-bs-interval="12000">
+                    <video class="d-block w-100" autoplay muted loop>
+                        <source src="video1.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="image2.jpg" class="d-block w-100">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://cdn.shopify.com/videos/c/o/v/1b96d14da3c8478aa81df8c12556d4fd.mp4"  class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+
+</div>
+<!-- Bootstrap JS (IMPORTANT for dropdown) -->
+<!---CARDS FOR WOMENS--->
+
+<h4>WOMENS</h4>
+
+<div class="container-fluid">
+    <div class="d-flex">
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://sabyasachi.com/cdn/shop/files/Untitled-1_575493bb-0e04-4932-a8d2-df551e18a876_300x@2x.jpg?v=1765344501" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text">FOR GENTLE MEN.</p>
+                <strong style="color:red">$436 <br> $12666% off</strong><br️
+                <a href="#" class="btn btn-primary mt-2">Add to cart</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://sabyasachi.com/cdn/shop/files/13A7161-2-2_1_H_7541eb3c-6c42-4ef8-ac95-34c93cde431d_300x@2x.jpg?v=1692790778" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text">FOR GENTLE MEN.</p>
+                <strong style="color:red">$436 <br> $12666% off</strong>
+                <a href="#" class="btn btn-primary mt-2">Add to cart</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://sabyasachi.com/cdn/shop/files/Sabyasachi-17.07.201915533H_300x@2x.jpg?v=1692790493" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text">FOR GENTLE MEN.</p>
+                <strong style="color:red">$436 <br> $12666% off</strong>
+                <a href="#" class="btn btn-primary mt-2">Add to cart</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://sabyasachi.com/cdn/shop/files/220225-22-277_001_1H_300x@2x.jpg?v=1692790493" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text">FOR GENTLE MEN.</p>
+                <strong style="color:red">$436 <br> $12666% off</strong>
+                <a href="#" class="btn btn-primary mt-2">Add to cart</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://sabyasachi.com/cdn/shop/files/M4B0661_webH_6b034317-e915-4986-8992-1c6802b8f171_300x@2x.jpg?v=1765344432" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text">FOR GENTLE MEN.</p>
+                <strong style="color:red">$436 <br> $12666% off</strong>
+                <a href="#" class="btn btn-primary mt-2">Add to cart</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://sabyasachi.com/cdn/shop/files/D230410-7-036H_300x@2x.jpg?v=1692790492" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text">FOR GENTLE MEN.</p>
+                <strong style="color:red">$436 <br> $12666% off</strong>
+                <a href="#" class="btn btn-primary mt-2">Add to cart</a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+<h4>MENS</h4>
+
+<div class="container-fluid">
+    <div class="d-flex">
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://sabyasachi.com/cdn/shop/files/DSabyasachi-18.02-1_1920x@2x.jpg?v=1693912520" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text">FOR GENTLE MEN.</p>
+                <strong style="color:red">$436 <br> $12666% off</strong><br️
+                <a href="#" class="btn btn-primary mt-2">Add to cart</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://sabyasachi.com/cdn/shop/files/DSabyasachi-18.02_2f7b5d1d-6fef-463a-9d15-735f48bbc26e_1920x@2x.jpg?v=1693912520" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text">FOR GENTLE MEN.</p>
+                <strong style="color:red">$436 <br> $12666% off</strong>
+                <a href="#" class="btn btn-primary mt-2">Add to cart</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://sabyasachi.com/cdn/shop/files/D220327-15-007_001_1920x@2x.jpg?v=1693832833" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text">FOR GENTLE MEN.</p>
+                <strong style="color:red">$436 <br> $12666% off</strong>
+                <a href="#" class="btn btn-primary mt-2">Add to cart</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://sabyasachi.com/cdn/shop/files/DSabyasachi-06.02_1920x@2x.jpg?v=1693832833" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text">FOR GENTLE MEN.</p>
+                <strong style="color:red">$436 <br> $12666% off</strong>
+                <a href="#" class="btn btn-primary mt-2">Add to cart</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="https://sabyasachi.com/cdn/shop/files/230423-82-068_4H_300x@2x.jpg?v=1692790492" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text">FOR GENTLE MEN.</p>
+                <strong style="color:red">$436 <br> $12666% off</strong>
+                <a href="#" class="btn btn-primary mt-2">Add to cart</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="https://sabyasachi.com/cdn/shop/files/D230425-139-175H_9c48c012-98d1-4133-96fb-a58703b84a06_300x@2x.jpg?v=1692790778" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text">FOR GENTLE MEN.</p>
+                <strong style="color:red">$436 <br> $12666% off</strong>
+                <a href="#" class="btn btn-primary mt-2">Add to cart</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<footer class="bg-dark text-light py-5">
+    <div class="container">
+        <div class="row gy-4">
+
+            <div class="col-md-4">
+                <h5 class="text-uppercase mb-3 fw-bold">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="mailto:support@gmail.com" class="text-decoration-none text-secondary">support@gmail.com</a></li>
+                    <li class="text-secondary mt-2">1st Floor BVR Building, Veeranapalya</li>
+                    <li class="text-secondary">Bangalore 566450</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="text-uppercase mb-3 fw-bold">Newsletter</h5>
+                <div class="input-group mb-3 w-75">
+                    <input type="email" class="form-control" placeholder="Enter email" aria-label="Email">
+                    <button class="btn btn-primary" type="button">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="text-uppercase mb-3 fw-bold">Follow Us</h5>
+                <div class="d-flex gap-3">
+                    <a href="#" class="btn btn-outline-light btn-sm rounded-circle">Ig</a>
+                    <a href="#" class="btn btn-outline-light btn-sm rounded-circle">Fb</a>
+                    <a href="#" class="btn btn-outline-light btn-sm rounded-circle">Tw</a>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="mt-4 border-secondary">
+        <div class="text-center text-secondary small">
+            © 2026 Your Company Name. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
