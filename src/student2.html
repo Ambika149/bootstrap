@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+    <script>
+        function demo() {
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let branch = document.getElementById("branch").value;
+            let address = document.getElementById("address").value;
+
+            // Open new page
+            let newPage = window.open("", "_blank");
+
+            // Write content to new page
+            newPage.document.write("<html><head><title>Output</title></head><body>");
+            newPage.document.write("<h2>Student Details</h2>");
+            newPage.document.write("<p>Name: " + name + "</p>");
+            newPage.document.write("<p>Age: " + age + "</p>");
+            newPage.document.write("<p>Branch: " + branch + "</p>");
+            newPage.document.write("<p>Address: " + address + "</p>");
+            newPage.document.write("</body></html>");
+
+            newPage.document.close();
+        }
+    </script>
+</head>
+<body>
+
+<h2>STUDENT FORM</h2>
+
+<input id="name" placeholder="Name"><br><br>
+<input id="age" placeholder="Age"><br><br>
+<input id="branch" placeholder="Branch"><br><br>
+<input id="address" placeholder="Address"><br><br>
+
+<button onclick="demo()">Submit</button>
+
+</body>
+</html>

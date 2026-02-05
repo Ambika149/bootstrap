@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function demo() {
+    let name1 = document.getElementById("name").value;
+    let age1 = document.getElementById("age").value;
+    let branch1 = document.getElementById("branch").value;
+    let address1 = document.getElementById("address").value;
+
+
+
+            document.getElementById("output").innerHTML =
+                "<h4>" +
+                "Name: " + name1 + "<br>" +
+                "Age: " + age1 + "<br>" +
+                "Branch: " + branch1 + "<br>" +
+                "Address: " + address1 +
+                "</h4>";
+
+    }
+
+
+</script>
+<form>
+    <h2> STUDENT</h2>
+    <label>NAME</label>
+    <input id = "name" type= "text"  placeholder = "Enter name"><br>
+
+    <label>age</label>
+    <input id = "age" type = "text" placeholder = "Enter age"><br>
+
+    <label>branch</label>
+    <input id = "branch" type = "text" placeholder = "Enter branch"><br>
+    <label>address</label>
+    <input id = "address" type = "text" placeholder = "Enter Address"><br>
+
+    <button id =  "btn" onclick="demo()">submit</button>
+</form>
+
+
+</body>
+</html>
