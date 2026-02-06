@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    function increase() {
+    count++;
+    document.getElementById("counts").innerText=count
+    }
+
+    function decrease() {
+    count--;
+    document.getElementById("counts").innerText=count
+    }
+
+    function reset() {
+    count=0;
+    document.getElementById("counts").innerText=count
+    }
+
+
+</script>
+<h4 id = "counts">0</h4>
+<button onclick="increase()">Increase</button>
+<button onclick="decrease()">Decrease</button>
+<button onclick="reset()">Reset</button>
+</body>
+</html>

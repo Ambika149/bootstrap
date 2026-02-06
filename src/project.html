@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> page1</title>
+    <style>
+
+
+
+        .comp {
+            text-decoration: line-through;
+            color: #a0a0a0;
+            background-color: #f0fff4;
+
+
+        .comp{
+        text-decoration:line-through;
+        color:purple;
+        }
+    </style>
+</head>
+<body>
+<h2>JAVA FULL STACK TODO TASK</h2>
+<input id = "input" placeholder = "Enter the task">
+<button id = "butn"> Add </button>
+<ul id = "ulist"> </ul>
+<script>
+    let input1 =document.getElementById("input")
+    let butn1 = document.getElementById("butn")
+    let ulist1 =document.getElementById("ulist")
+
+    butn1.addEventListener("click" , function(){
+    let data=input1.value;
+
+    if (data=="")
+    return;
+
+    let li = document.createElement("li")
+    li.innerText=data
+
+    li.addEventListener("click",function(){     //to toggle the completed task
+    li.classList.toggle("comp")
+    })
+
+    ulist1.appendChild(li)
+    input1.value=""
+    })
+</script>
+</body>
+</html>

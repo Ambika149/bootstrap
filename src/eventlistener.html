@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h4 id = "count"> 0 </h4>
+<button id = "inc">Increase</button>
+<button id = "decrease">Decrease</button>
+<button id = "reset">Reset</button>
+
+<script>
+
+let count = 0;
+let a = document.getElementById("count");
+let b = document.getElementById("inc");
+let c = document.getElementById("decrease");
+let d = document.getElementById("reset");
+
+b.addEventListener("click",function(){
+count++;
+a.innerText=count
+});
+
+c.addEventListener("click",function(){
+count--;
+a.innerText=count
+});
+
+d.addEventListener("click",function(){
+count=0;
+a.innerText=count
+});
+</script>
+
+
+
+</body>
+</html>
